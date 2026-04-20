@@ -4,6 +4,7 @@ import Home from "./pages/Home.jsx"
 import Cart from './pages/Cart.jsx'
 import Orders from './pages/Orders.jsx'
 import Items from './pages/Item.jsx'
+import Search from './pages/Search.jsx'
 const App = () => {
   return (
     <div className='text-5xl'>
@@ -12,6 +13,7 @@ const App = () => {
         <Route path='/cart' element={<Cart/>} />
         <Route path='/orders' element={<Orders/>} />
         <Route path='/item/:id' element={<Items/>} />
+        <Route path='/search/:item' element={<Search/>} />
       </Routes>
     </div>
   )

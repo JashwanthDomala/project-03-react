@@ -20,7 +20,7 @@ const Category = ({category , header}) => {
         <h1 className=' bg-amber-300 uppercase px-10 '>{
         header?header:category
         }</h1>
-        <div className=' grid grid-cols-5 gap-20'>
+        <div className=' grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-20'>
             {
                 data.map((item,key) => {
                     console.log(item +" "+ item.title+"hello")
