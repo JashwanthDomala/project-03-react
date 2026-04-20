@@ -17,17 +17,22 @@ const Cart = () => {
         localStorage.setItem("myOrder",JSON.stringify(myOrder));
         console.log(JSON.parse(localStorage.getItem("myOrder")))
         setItems([])
+        alert(`total products of cost ${total} has be ordered check in your orders`)
       }
 
 
   useEffect(()=>{
     localStorage.setItem("cart",JSON.stringify(items));
   },[items])
+
   useEffect(()=>{
+    let temp = 0
     items.map(({price}) => {
-      setTotal(total + price)
+      temp = temp + price
     })
+    setTotal(temp.toFixed(2));
   },[items])
+
   return (
 
     <div className='flex flex-col items-center gap-5' >
@@ -51,7 +56,7 @@ const Cart = () => {
       }
       </div>
     { items?.length>0 &&(
-      <div className=' self-end '>
+      <div className=' self-end md:self-center '>
         <h1 className='text-4xl m-2 bg-gray-300 w-70 p-2 text-center rounded-xl hover:scale-105 transition-transform' >Total : {total}</h1>
         <h1 onClick={order} className='text-4xl m-2 bg-amber-300 w-70 p-2 text-center rounded-xl hover:scale-105 transition-transform ' >Buy All</h1>
       </div>

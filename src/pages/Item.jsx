@@ -15,7 +15,7 @@ const Item = () => {
       cart = cart.filter((ele)=>ele.id != item.id)
       let newCart = [...cart,item]
       localStorage.setItem("cart",JSON.stringify(newCart));
-      console.log(JSON.parse(localStorage.getItem("cart")))
+      alert(`${item.title} is added successfully to your cart`)
     }
     function order(){
         let myOrder =localStorage.getItem("myOrder")
