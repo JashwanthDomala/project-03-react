@@ -32,8 +32,8 @@ const Item = () => {
     <div>
       <div className='h-[70vh]  flex gap-3'>
             <div className='section1 bg-gray-500 flex flex-col gap-1 w-1/2'>
-                <img className='w-[60vh] h-[56vh] ' src={img} alt="" />
-                <div className='itemImg h-50 w-full overflow-x-scroll  flex'>
+                <img className='w-[60vh] h-[53vh] ' src={img} alt="" />
+                <div className='itemImg h-50 w-full flex overflow-x-scroll  '>
                     {
                       item.images.map((ele,key)=>{
                           return(
